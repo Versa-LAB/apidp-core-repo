@@ -1,0 +1,103 @@
+{
+    "key": "Versa-API-DP-Confluence",
+    "name": "Versa Networks Confluence Connector - QA02",
+    "description": "Confluence Connector",
+    "vendor": {
+        "name": "Versa Networks",
+        "url": "https://versa-networks.com/"
+    },
+    "baseUrl": "https://asc-qa02-versa.apidp.versa-test.net/v1/confluence",
+    "authentication": {
+        "type": "jwt"
+    },
+    "lifecycle": {
+        "installed": "/webhook?event_type=app_installed"
+    },
+    "scopes": [
+        "READ"
+    ],
+    "modules": {
+        "webhooks": [
+        {
+            "event": "comment_created",
+            "url": "/webhook?event_type=comment_created"
+        },
+        {
+            "event": "comment_updated",
+            "url": "/webhook?event_type=comment_updated"
+        },
+        {
+            "event": "comment_removed",
+            "url": "/webhook?event_type=comment_removed"
+        },
+        {
+            "event": "attachment_created",
+            "url": "/webhook?event_type=attachment_created"
+        },
+        {
+            "event": "attachment_updated",
+            "url": "/webhook?event_type=attachment_updated"
+        },
+        {
+            "event": "attachment_removed",
+            "url": "/webhook?event_type=attachment_removed"
+        },
+        {
+            "event": "attachment_restored",
+            "url": "/webhook?event_type=attachment_restored"
+        },
+        {
+            "event": "attachment_trashed",
+            "url": "/webhook?event_type=attachment_trashed"
+        },
+        {
+            "event": "blog_created",
+            "url": "/webhook?event_type=blog_created"
+        },
+        {
+            "event": "blog_restored",
+            "url": "/webhook?event_type=blog_restored"
+        },
+        {
+            "event": "blog_updated",
+            "url": "/webhook?event_type=blog_updated"
+        },
+        {
+            "event": "blog_removed",
+            "url": "/webhook?event_type=blog_removed"
+        },
+        {
+            "event": "blog_trashed",
+            "url": "/webhook?event_type=blog_trashed"
+        },
+        {
+            "event": "page_created",
+            "url": "/webhook?event_type=page_created"
+        },
+        {
+            "event": "page_restored",
+            "url": "/webhook?event_type=page_restored"
+        },
+        {
+            "event": "page_updated",
+            "url": "/webhook?event_type=page_updated"
+        },
+        {
+            "event": "page_removed",
+            "url": "/webhook?event_type=page_removed"
+        },
+        {
+            "event": "page_trashed",
+            "url": "/webhook?event_type=page_trashed"
+        },
+        {
+            "event": "space_created",
+            "url": "/webhook?event_type=space_created"
+        },
+        {
+            "event": "space_removed",
+            "url": "/webhook?event_type=space_removed"
+        }
+        ]
+    }
+}
